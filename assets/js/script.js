@@ -50,34 +50,10 @@ function closeModal() {
 
 function getMonth(date) {
   let month = date.substring(3, 5);
-  switch (month) {
-    case '01':
-      return 'JAN';
-    case '02':
-      return 'FEB';
-    case '03':
-      return 'MAR';
-    case '04':
-      return 'APR';
-    case '05':
-      return 'MAY';
-    case '06':
-      return 'JUN';
-    case '07':
-      return 'JULY';
-    case '08':
-      return 'AUG';
-    case '09':
-      return 'SEP';
-    case '10':
-      return 'OCT';
-    case '11':
-      return 'NOV';
-    case '12':
-      return 'DEC';
-    default:
-      return 'UNKNOWN'
-  }
+  let months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUNE', 'JULY', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  if(month > 12 || month < 0)
+    return 'UNKNOWN';
+  return months[month - 1];
 }
 
 document.getElementById('close-button').addEventListener('click', closeModal);
@@ -103,13 +79,13 @@ particlesJS('snow',
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#000000"
+        "color": "white"
       },
       "polygon": {
         "nb_sides": 5
       },
       "image": {
-        "src": "../img/star.svg",
+        "src": "",
         "width": 100,
         "height": 100
       }
@@ -157,3 +133,4 @@ particlesJS('snow',
     }
   }
 });
+

@@ -26,6 +26,9 @@ body {
 }
 
 .date-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     box-sizing: border-box;
     width: 9rem;
     height: 9rem;
@@ -50,7 +53,7 @@ body {
 
 .date-card>p {
     text-align: center;
-    line-height: 30px;
+    /* line-height: 30px; */
 }
 
 .date-card:hover {
@@ -143,7 +146,7 @@ body {
 
 @media screen and (max-width: 650px) {
     :root {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
