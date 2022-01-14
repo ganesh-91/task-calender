@@ -31,19 +31,20 @@ function callData() {
                 mon.innerHTML = month[date[1] - 1];
                 card.appendChild(mon);
                 parentElm.append(card);
-                var input = document.createElement("input");
-                input.setAttribute('type', 'hidden')
-                input.setAttribute('value', resp[i].text_msg);
-                card.appendChild(input);
-                card.setAttribute('onClick', 'callModal(this)')
+                //var input = document.createElement("input");
+                //input.setAttribute('type', 'hidden')
+                //input.setAttribute('value', resp[i].text_msg);
+                //card.appendChild(input);
+                var txtMsg=resp[i].text_msg;
+                card.setAttribute('onClick', 'callModal("'+txtMsg+'")')
             }
         })
     }
 
 function callModal(element) {
-    var txtMsg = element.lastChild.defaultValue;
+    //var txtMsg = element.lastChild.defaultValue;
     var modalContent= document.querySelector('.txt-msg');
-    modalContent.innerHTML = txtMsg;
+    modalContent.innerHTML = element;
     document.querySelector('.bg-modal').style.display='flex';
 }
 function closeModal(){
