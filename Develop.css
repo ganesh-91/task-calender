@@ -1,6 +1,6 @@
 #Container {
     display: grid;
-    grid-template-columns: repeat(5, 800px);
+    grid-template-columns: repeat(5, 1000px);
     gap: 16px;
     margin: auto;
     width: fit-content;
@@ -8,22 +8,29 @@
 
 .card {
     border: 2px solid yellow;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 10px;
     height: 200px;
     transition: ease-in .2s;
     background: #00008b;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+   
 }
 
 .textMonth {
     color: yellow;
     font-size: 30px;
+    
 }
 
 .date {
     color: white;
     font-size: 50px;
-    line-height: 100px;
+  
+    
 }
 
 .card:hover {
@@ -54,19 +61,19 @@ div {
 
 @media (max-width:500px) {
     #Container {
-        grid-template-columns: repeat(3, 200px);
+        grid-template-columns: repeat(3, 204px);
     }
 }
 
 @media (min-width:501px) and (max-width:1024px) {
     #Container {
-        grid-template-columns: repeat(4, 200px);
+        grid-template-columns: repeat(4, 204px);
     }
 }
 
 @media (min-width:1025px) {
     #Container {
-        grid-template-columns: repeat(5, 200px);
+        grid-template-columns: repeat(5, 204px);
     }
 }
 
@@ -95,8 +102,8 @@ div {
     margin: auto;
     padding: 20px;
     border: 2px solid yellow;
-    width: 250px;
-    height: 150px;
+    width: 224px;
+    height: 224px;
     color: white;
     text-align: center;
     position: relative;
@@ -104,7 +111,7 @@ div {
 
 #popup-id {
     position: relative;
-    line-height: 100px;
+    line-height: 224px;
 
 }
 
@@ -115,7 +122,7 @@ div {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 5px;
+    padding: 5px 11px;
     margin: 5px;
     background-color: darkblue;
     border: 1px solid yellow;

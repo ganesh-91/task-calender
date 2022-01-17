@@ -69,12 +69,12 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#FFFF00"
     },
     "shape": {
       "type": "star",
       "stroke": {
-        "width": 0,
+        "width": 2,
         "color": "#000000"
       },
       "polygon": {
