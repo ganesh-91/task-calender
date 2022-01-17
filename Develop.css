@@ -1,0 +1,150 @@
+#Container {
+    display: grid;
+    grid-template-columns: repeat(5, 1000px);
+    gap: 16px;
+    margin: auto;
+    width: fit-content;
+}
+
+.card {
+    border: 2px solid yellow;
+    /* padding: 10px; */
+    border-radius: 10px;
+    height: 200px;
+    transition: ease-in .2s;
+    background: #00008b;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+   
+}
+
+.textMonth {
+    color: yellow;
+    font-size: 30px;
+    
+}
+
+.date {
+    color: white;
+    font-size: 50px;
+  
+    
+}
+
+.card:hover {
+    transform: scale(1.5);
+    background-color: yellow;
+}
+
+.card:hover .textMonth {
+    color: #00008b;
+}
+
+.card:hover .date {
+    color: #00008b;
+}
+
+body {
+    background-color: #00008b;
+    height: 100%;
+    margin:20px;
+    /* position: relative; */
+}
+
+div {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+@media (max-width:500px) {
+    #Container {
+        grid-template-columns: repeat(3, 204px);
+    }
+}
+
+@media (min-width:501px) and (max-width:1024px) {
+    #Container {
+        grid-template-columns: repeat(4, 204px);
+    }
+}
+
+@media (min-width:1025px) {
+    #Container {
+        grid-template-columns: repeat(5, 204px);
+    }
+}
+
+.popup-background {
+    display: none;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    /* Enable scroll if needed */
+}
+
+.popup-content {
+    background-color: #00008b;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid yellow;
+    width: 224px;
+    height: 224px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+#popup-id {
+    position: relative;
+    line-height: 224px;
+
+}
+
+.close {
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 11px;
+    margin: 5px;
+    background-color: darkblue;
+    border: 1px solid yellow;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+}
