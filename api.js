@@ -101,6 +101,7 @@
             let overlay = document.getElementById('overlay');
             overlay.classList.remove('overlay-active');
         }
+        document.getElementById('close-button').addEventListener("click",closeModal);
 
         function getMonth(date){
             let  month = date.substring(3,5);
