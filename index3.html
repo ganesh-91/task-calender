@@ -52,17 +52,30 @@
   }
   .modal{
     position: fixed;
-    left: 50%;
-    top: 50%;
+    /* position: absolute; */
+    text-align: center;
+    color: #ffffff;
+    left: 40%;
+    top: 30%;
     z-index: 7;
-    height: 5rem;
-    width: 9rem;
+    height: 10rem;
+    width: 15rem;
     background-color: navy;
     border: 2px solid yellow;
     outline: 2px solid yellow;
     /* transform: scale(0); */
     transform: translate(-50%,-50%) scale(0);
     overflow: hidden;
+  }
+  .close-button{
+    position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: all 200ms;
+  font-size: 15px;
+  background-color: rgb(3, 3, 75);
+  text-decoration: none;
+  color: rgb(218, 205, 29);
   }
   .modal-active{
     transform: scale(1);
@@ -85,7 +98,7 @@
   <div class="grid" id = "grid"></div> 
   <div class="container" id = "container"></div>
   <div class="modal" id= "modal">
-    <button id='close-button' class="close-button">&times;</button>
+    <button  class="close-button" id='close-button' >&times;</button>
     <p id="modal-message"></p>
   </div>
   <div class="overlay" id= "overlay">
