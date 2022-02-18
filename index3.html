@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+<body style="background-color:#000080;"></body>
+
+<style>
+  .grid {
+    display: grid;
+    text-align: center;
+    top: 0;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(6, 100px);
+    /* grid-template-columns: repeat(auto-fit, minmax(100px));
+    grid-template-rows: repeat(auto-fit, minmax(100px)); */
+    grid-gap: 10px;
+    border-radius: 2px;
+    justify-content: center;
+
+  }
+
+  .date {
+    z-index: 5;
+    font-size: 15px;
+    padding: .5em;
+    color: #ffffff;
+    justify-content: center;
+    font-family: Calibri;
+    background: #000080;
+    border: 2px solid rgb(243, 229, 27);
+    border-radius: 2px;
+  }
+  .date:hover {
+    z-index: 6;
+    transform: scale(1.5);
+    background-color: yellow;
+    color: #000080;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  #particles-js{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;    
+  }
+  .modal{
+    position: fixed;
+    /* position: absolute; */
+    text-align: center;
+    color: #ffffff;
+    left: 40%;
+    top: 30%;
+    z-index: 7;
+    height: 10rem;
+    width: 15rem;
+    background-color: navy;
+    border: 2px solid yellow;
+    outline: 2px solid yellow;
+    /* transform: scale(0); */
+    transform: translate(-50%,-50%) scale(0);
+    overflow: hidden;
+  }
+  .close-button{
+    position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: all 200ms;
+  font-size: 15px;
+  background-color: rgb(3, 3, 75);
+  text-decoration: none;
+  color: rgb(218, 205, 29);
+  }
+  .modal-active{
+    transform: scale(1);
+  }
+ 
+
+  @media only screen and (min-width:0px) and (max-width:500px) {
+    .grid {grid-template-columns: repeat(3, 100px);}
+    }
+  @media only screen and (min-width:501px) and (max-width:1024px) {
+    .grid {grid-template-columns: repeat(4, 100px);}
+  }
+  @media only screen and (min-width: 1025){
+    .grid {grid-template-columns: repeat(5, 100px);}
+  }
+</style>
+</head>
+
+<body id = "App">
+  <div class="grid" id = "grid"></div> 
+  <div class="container" id = "container"></div>
+  <div class="modal" id= "modal">
+    <button  class="close-button" id='close-button' >&times;</button>
+    <p id="modal-message"></p>
+  </div>
+  <div class="overlay" id= "overlay">
+    <div id="particles-js"></div>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="api.js"></script>
+
+
+    <!-- <div id="grid">
+    <div>1<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>2<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>3<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>4<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>5<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>6<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>7<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>8<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>9<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>10<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>11<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>12<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>13<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>14<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>15<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>16<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>17<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>18<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>19<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>20<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>21<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>22<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>23<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>24<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>25<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>26<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>27<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>28<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>29<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>30<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+    <div>31<font color="yellow" , size="+2"> </br> &nbsp JAN</font>
+    </div>
+
+  </div> -->
+
+
+</body>
+
+</html>
